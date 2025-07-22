@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detail Produk</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    body {
+      background: #f8f8f8;
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+    }
+
+    .container-custom {
+      max-width: 960px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .product-title {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .product-price {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #d62828;
+    }
+
+    .product-image {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .btn-back-outside {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: none;
+      border: none;
+      color: #6c757d;
+      font-size: 1rem;
+      text-decoration: none;
+      margin-bottom: 25px;
+    }
+
+    .btn-back-outside:hover {
+      color: #495057;
+      text-decoration: underline;
+    }
+
+    .btn-buy {
+      background-color: #4f46e5;
+      color: white;
+      font-weight: 600;
+    }
+
+    .btn-buy:hover {
+      background-color: #4338ca;
+    }
+
+    .label-bold {
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-custom">
+
+  <!-- 🔙 Tombol Kembali -->
+  <a href="javascript:history.back()" class="btn-back-outside">
+    <i class="bi bi-arrow-left"></i> Kembali ke halaman sebelumnya
+  </a>
+
+  <!-- Gambar + Detail -->
+  <div class="row align-items-start gy-4 mb-5">
+    <div class="col-md-6">
+      <img src="../assets/img/kelasPintar.png" alt="Nama Produk" class="product-image">
+    </div>
+    <div class="col-md-6">
+      <h1 class="product-title mb-2">Produk Handmade Eksklusif</h1>
+      <p class="product-price">Rp 45.000</p>
+      <p class="text-secondary">Dibuat dengan cinta oleh siswa-siswi SMKN 4 Malang. Cocok untuk kado, dekorasi, maupun koleksi pribadi. Setiap produk dibuat terbatas dan unik!</p>
+    </div>
+  </div>
+
+  <!-- 📝 Form Pembelian -->
+  <div class="mb-4">
+    <h4 class="mb-3">Formulir Pembelian</h4>
+    <form id="formPembelian" action="proses_pembelian.php" method="POST">
+  <input type="hidden" name="produk_id" value="123">
+
+  <div class="row g-3">
+    <div class="col-md-6">
+      <label for="jumlah" class="label-bold">Jumlah</label>
+      <input type="number" class="form-control" name="jumlah" id="jumlah" value="1" min="1" required>
+    </div>
+    <div class="col-md-6">
+      <label for="catatan" class="label-bold">Catatan (Opsional)</label>
+      <input type="text" class="form-control" name="catatan" id="catatan" placeholder="Contoh: warna, ukuran khusus, dsb.">
+    </div>
+  </div>
+
+  <!-- Tombol yang memicu modal -->
+  <div class="mt-4">
+    <button type="button" class="btn btn-buy px-4 py-2" data-bs-toggle="modal" data-bs-target="#konfirmasiModal">
+      <i class="bi bi-cart-check-fill me-1"></i> Beli Sekarang
+    </button>
+  </div>
+
+  <!-- Modal Konfirmasi -->
+  <div class="modal fade" id="konfirmasiModal" tabindex="-1" aria-labelledby="konfirmasiModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="konfirmasiModalLabel">Konfirmasi Pembelian</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <p>Apakah kamu yakin ingin membeli produk ini?</p>
+
+          <div class="mb-3">
+            <label for="metode" class="form-label">Pilih Metode Pembayaran:</label>
+            <select class="form-select" id="metode" name="metode" required>
+              <option value="">-- Pilih Metode --</option>
+              <option value="transfer">Transfer Bank</option>
+              <option value="dana">Dana / E-Wallet</option>
+              <option value="cod">Bayar di Tempat (COD)</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-primary">Konfirmasi Pembelian</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+  </div>
+
+</div>
+
+</body>
+</html>

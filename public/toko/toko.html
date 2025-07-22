@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" href="/assets/img/logo grafika.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', 'Raleway', sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    .hero-cover img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      filter: brightness(0.6);
+      border-radius: 0.5rem;
+    }
+
+    .feature-card-custom {
+      background-color: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .feature-card-custom .icon-wrapper {
+      display: inline-flex;
+      padding: 15px;
+      border-radius: 0.75rem;
+    }
+
+    .feature-card-custom.active {
+      border-left: 6px solid #003366;
+      padding-left: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Hero Section -->
+<section class="bg-light py-5 mb-0.5 mt-5">
+  <div class="container">
+    <div class="row align-items-center g-4 flex-column-reverse flex-lg-row">
+      <div class="col-lg-6 text-center text-lg-start">
+        <h1 class="fw-bold mb-3" style="font-family: Raleway;">Dari Kreasi Siswa<br>Hadir Karya Istimewa</h1>
+        <p class="lead mb-4">Laman ini berisi produk unggulan dari Siswa-siswi SMKN 4 Malang yang bisa Anda pesan</p>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="../assets/img/pjbl.png" alt="Cover Jualan" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fitur -->
+<section class="py-4 mb-5" id="features">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-5">
+        <div class="feature-card-custom active p-4 text-start h-100 shadow rounded">
+          <div class="icon-wrapper mb-3 bg-light p-3 rounded-circle">
+            <i class="bi bi-book-fill text-primary fs-3"></i>
+          </div>
+          <h5 class="fw-bold">Innovative Curriculum</h5>
+          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card-custom active p-4 text-start h-100 shadow rounded">
+          <div class="icon-wrapper mb-3 bg-primary-subtle p-3 rounded-circle">
+            <i class="bi bi-laptop-fill text-dark fs-3"></i>
+          </div>
+          <h5 class="fw-bold">Modern Facilities</h5>
+          <p class="mb-0">Donec gravida risus at sollicitudin luctus.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mx-auto">
+        <div class="feature-card-custom active p-4 text-start h-100 shadow rounded">
+          <div class="icon-wrapper mb-3 bg-light p-3 rounded-circle">
+            <i class="bi bi-people-fill text-primary fs-3"></i>
+          </div>
+          <h5 class="fw-bold">Expert Faculty</h5>
+          <p class="mb-0">Vestibulum ante ipsum primis in faucibus orci luctus.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Penjelasan -->
+<section class="py-5 bg-white" id="penjelasan">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 order-2 order-lg-1">
+        <h2 class="fw-bold mb-3">Kenapa Produk Kami Istimewa?</h2>
+        <p class="mb-4 fs-5">Produk-produk ini merupakan hasil karya kreatif siswa-siswi SMKN 4 Malang yang didukung dengan kurikulum inovatif dan fasilitas modern. Setiap karya memiliki cerita dan dedikasi yang tinggi.</p>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Dibuat langsung oleh siswa</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Menggunakan peralatan modern</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Dapat dipesan langsung oleh publik</li>
+        </ul>
+        <form class="d-flex mt-3" role="search">
+          <input type="text" class="form-control me-2" placeholder="Cari Jurusan..." aria-label="Search">
+          <button class="btn btn-primary" type="submit">
+            <i class="bi bi-search"></i> Cari
+          </button>
+        </form>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 text-center">
+        <img src="../assets/img/coverjualan.png" alt="Ilustrasi Produk" class="img-fluid rounded shadow" style="max-height: 50vh;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Produk Terbaru -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-4">Produk Terbaru</h2>
+<hr class="mx-auto mb-5" style="width: 80px; height: 4px; background-color: #0d6efd; opacity: 1; border: none; border-radius: 2px;">
+
+    <div class="row justify-content-center g-4">
+      <div class="col-md-4 col-sm-6">
+        <div class="card h-100">
+          <img src="../assets/img/kelasPintar.png" class="card-img-top" alt="Kelas Pintar">
+          <div class="card-body">
+            <h5 class="card-title">Kelas Pintar</h5>
+            <p class="card-text">Deskripsi singkat produk unggulan siswa-siswi terbaik.</p>
+            <a href="awal.html" class="btn btn-primary">Lihat Produk</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="card h-100">
+          <img src="../assets/img/kelasPintar.png" class="card-img-top" alt="Kelas Pintar">
+          <div class="card-body">
+            <h5 class="card-title">Kelas Pintar</h5>
+            <p class="card-text">Deskripsi singkat produk unggulan siswa-siswi terbaik.</p>
+            <a href="awal.html" class="btn btn-primary">Lihat Produk</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="card h-100">
+          <img src="../assets/img/kelasPintar.png" class="card-img-top" alt="Kelas Pintar">
+          <div class="card-body">
+            <h5 class="card-title">Kelas Pintar</h5>
+            <p class="card-text">Deskripsi singkat produk unggulan siswa-siswi terbaik.</p>
+            <a href="awal.html" class="btn btn-primary">Lihat Produk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
